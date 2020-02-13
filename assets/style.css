@@ -22,8 +22,78 @@ body{
 .card{
   background-color: rgb(192, 194, 194);
   border: 1px solid black;
+  color: white;
+  text-shadow: 1px 1px black;
 }
 
 li{
   cursor: pointer;
+}
+
+.bug{
+background-color: rgb(37, 223, 37);
+}
+
+.dark{
+background-color: rgb(59, 58, 58);
+}
+
+.dragon{
+background-color: teal;
+}
+
+.electric{
+  background-color: yellow;
+}
+
+.fairy{
+  background-color: rgb(231, 50, 111);
+}
+
+.fighting{
+  background-color: rgb(245, 157, 43);
+}
+
+.fire{
+  background-color: red;
+}
+
+.flying{
+  background-color: silver;
+}
+
+.ghost{
+  background-color: rgb(60, 0, 128);
+}
+
+.grass{
+  background-color: rgb(39, 185, 51);
+}
+
+.ground{
+  background-color: rgb(165, 87, 42);
+}
+
+.ice{
+  background-color: rgb(146, 177, 204);
+}
+
+.poison{
+  background-color: rgb(155, 48, 155);
+}
+
+.psychic{
+background-color: rgb(250, 39, 250);
+}
+
+.rock{
+  background-color: rgb(71, 38, 15);
+}
+
+.steel{
+  background-color: rgb(129, 127, 127);
+}
+
+.water{
+  background-color: rgb(41, 41, 230);
 }

@@ -1,8 +1,10 @@
 import Pokemon from "./Models/Pokemon.js";
 
 let _state = {
-  activePokemon: [],
+  /** @type Pokemon */
+  activePokemon: null,
   pokemons: [],
+  /** @type {Pokemon[]} */
   myPokemons: []
 };
 

@@ -3,8 +3,8 @@ import store from "../store.js";
 
 //Private
 function _draw() {
-  let pokemon = store.State.pokemons
-  let template = ""
+  let pokemon = store.State.pokemons;
+  let template = "";
   pokemon.forEach(p => {
     template += `<li onclick="app.pokemonsController.getPokemonById('${p.url}')">${p.name}</li>`
   })
@@ -23,7 +23,7 @@ function _drawMyPokemon() {
   let pokemon = store.State.myPokemons
   let template = ""
   pokemon.forEach(p => {
-    template += `<li onclick="app.pokemonsController.selectMyPokemon('${p._id}')">${p.name}</li>`
+    template += `<li onclick="app.pokemonsController.setMyPokemon('${p._id}')">${p.name}</li>`
   })
   document.getElementById("myPokemon-list").innerHTML = template
 }
@@ -32,10 +32,10 @@ function _drawMyPokemon() {
 export default class PokemonsController {
   constructor() {
     store.subscribe("pokemons", _draw);
-    store.subscribe("myPokemons", _drawMyPokemon);
     store.subscribe("activePokemon", _drawActivePokemon);
+    store.subscribe("myPokemons", _drawMyPokemon);
 
-    PokemonService.getApiPokemons();
+    // PokemonService.getApiPokemons();
     PokemonService.getAllMyPokemons();
 
 
@@ -46,14 +46,29 @@ export default class PokemonsController {
   }
 
   catch() {
+    let found = store.State.myPokemons.find(p => p.name == store.State.activePokemon.name);
+    if (found) {
+      alert("you already have this pokemon");
+      return;
+    }
     PokemonService.catch()
   }
 
-  selectMyPokemon(id) {
-    PokemonService.selectMyPokemon(id)
+  setMyPokemon(id) {
+    PokemonService.setMyPokemon(id)
   }
 
   release(id) {
     PokemonService.release(id)
+  }
+
+  searchByClass(event) {
+    event.preventDefault();
+    let form = document.getElementById("typeSelector");
+    let result = form.options[form.selectedIndex].value;
+    PokemonService.getApiPokemonByType(result)
+
+    // let value =
+    //   PokemonService.searchByClass(value)
   }
 }

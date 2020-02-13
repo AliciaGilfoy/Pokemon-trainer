@@ -25,6 +25,31 @@
         <div class="row main-row">
             <div class="col-3">
                 <h2>Pokemon</h2>
+                <form class="form-inline" onsubmit="app.pokemonsController.searchByClass(event)">
+                    <label class="my-1 mr-2" for="typeSelector">Type</label>
+                    <select class="custom-select my-1 mr-sm-2" id="typeSelector">
+                        <option selected>Choose...</option>
+                        <option id="1" value="1">Normal</option>
+                        <option id="2" value="2">Fighting</option>
+                        <option id="3" value="3">Flying</option>
+                        <option id="4" value="4">Poison</option>
+                        <option id="5" value="5">Ground</option>
+                        <option id="6" value="6">Rock</option>
+                        <option id="7" value="7">Bug</option>
+                        <option id="8" value="8">Ghost</option>
+                        <option id="9" value="9">Steel</option>
+                        <option id="10" value="10">Fire</option>
+                        <option id="11" value="11">Water</option>
+                        <option id="12" value="12">Grass</option>
+                        <option id="13" value="13">Electric</option>
+                        <option id="14" value="14">Psychic</option>
+                        <option id="15" value="15">Ice</option>
+                        <option id="16" value="16">Dragon</option>
+                        <option id="17" value="17">Dark</option>
+                        <option id="18" value="18">Fairy</option>
+                    </select>
+                    <button type="submit" class="btn btn-secondary my-1">Find Pokemon</button>
+                </form>
                 <ul id="pokemon-list">
                     <li>pokemon</li>
                 </ul>
