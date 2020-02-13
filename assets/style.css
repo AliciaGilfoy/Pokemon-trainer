@@ -1,0 +1,29 @@
+body{
+  max-width: 100vw;
+  background-color: rgb(99, 181, 219);
+}
+
+.main-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90vh;
+  align-items: flex-start;
+}
+
+.header-row{
+  min-height: 10vh;
+}
+
+.pokemon-card{
+  margin-top: 10rem;
+}
+
+.card{
+  background-color: rgb(192, 194, 194);
+  border: 1px solid black;
+}
+
+li{
+  cursor: pointer;
+}
