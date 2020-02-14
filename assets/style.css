@@ -20,7 +20,6 @@ body{
 }
 
 .card{
-  background-color: rgb(192, 194, 194);
   border: 1px solid black;
   color: white;
   text-shadow: 1px 1px black;
@@ -32,6 +31,7 @@ li{
 
 .bug{
 background-color: rgb(37, 223, 37);
+z-index: 1;
 }
 
 .dark{
@@ -96,4 +96,14 @@ background-color: rgb(250, 39, 250);
 
 .water{
   background-color: rgb(41, 41, 230);
+}
+
+#pokemon-list{
+  height: 500px;
+  overflow-y: scroll;
+}
+
+#myPokemon-list{
+  height: 500px;
+  overflow-y: scroll;
 }

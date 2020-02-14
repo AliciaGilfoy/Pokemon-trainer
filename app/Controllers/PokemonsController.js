@@ -35,7 +35,7 @@ export default class PokemonsController {
     store.subscribe("activePokemon", _drawActivePokemon);
     store.subscribe("myPokemons", _drawMyPokemon);
 
-    // PokemonService.getApiPokemons();
+    PokemonService.getApiPokemons();
     PokemonService.getAllMyPokemons();
 
 

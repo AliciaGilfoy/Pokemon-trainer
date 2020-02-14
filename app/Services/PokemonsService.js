@@ -21,10 +21,9 @@ class PokemonsService {
     _pokeApi.get(string)
       .then(res => {
         let newPokeList = res.data.pokemon
-        for (let i = 0; i < 21; i++) {
+        for (let i = 0; i < newPokeList.length; i++) {
           let newPokemon = newPokeList[i].pokemon;
           store.State.pokemons.push(newPokemon)
-          console.log(store.State.pokemons)
           store.commit("pokemons", store.State.pokemons);
         }
       }).catch(error => {
@@ -35,7 +34,6 @@ class PokemonsService {
     _pokeApi.get("pokemon")
       .then(res => {
         store.commit("pokemons", res.data.results)
-        console.log(res.data.results)
       }).catch(error => {
         console.error(error);
       });
